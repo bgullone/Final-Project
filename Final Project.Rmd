@@ -1,0 +1,222 @@
+---
+title: "Final Project - BDS 522"
+author: "Brittany Gullone"
+date: "December 19, 2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/Britt/Desktop")
+library(ggplot2)
+library(latexpdf)
+library(readxl)
+AllRolls_Data <- read_excel("~/Statistical Reasoning for Behavioral Science (BDS 522)/R Code/AllRolls&Data.xlsx")
+load("~/Statistical Reasoning for Behavioral Science (BDS 522)/R Code/SavePoint-12.4.RData")
+```
+
+## Introduction
+
+  From tax and insurance fraud to intellectual property theft, dishonest behavior is a ubiquitous component of modern society.  It might intuitively follow that such acts of dishonesty can result in a significant burden on a country's economy (Mazar and Ariely, 2006). In fact, it is estimated that in the United States alone, fraudulent activities have resulted in losses upwards of hundreds of millions of dollars. Moreover, recent research has shown that over the past couple of decades, the number of academic integrity violations at universities has been rising consistently (Bath et al, 2014). As a result, it has become increasingly important to examine why people engage in dishonest behavior in order to inform how institutions can develop effective interventions to reduce the prevalence of cheating. 
+  
+ Prior research has shown that several factors influence an individual's decision to cheat. While individual characteristics like gender appear to have an effect on cheating behavior, contextual features, such as the likelihood of getting caught, also affect the extent to which people engage in dishonest behavior (Jacobsen et al., 2017). For example, according to the Economic Model of Crime and Dishonesty, when deciding whether or not to cheat, individuals conduct a cost-benefit analysis such that if the expected costs associated with a punishment outweigh the expected benefits associated with cheating, people refrain from unethical behavior. 
+ 
+Although, more recent research conducted in the field of behavioral science has shown that people may not engage in this cost-benefit analysis as systematically as experts once believed (Thaler and Ganser, 2015). Instead, biases, which affect one's decision making, may result in irrational behavior which the individual does not consciously choose. One area of focus is the effect of social norms, which has been shown to encourage or prevent cheating behavior in certain circumstances (Bicchieri and Xiao, 2009). We plan to build upon the research conducted by Fischbacher (2008) by investigating the role that descriptive and social norms each play in an individual's decision to (or not to) engage in a cheating behavior. To do this we will conduct a dice-in-a-cup paradigm game to examine the differences in constructed reference groups, specifically examining the effect of in-group versus out-group dynamics. We will construct these in-group and out-group dynamics using race, specifically Asian versus Caucasian, as a reference group. 
+
+ Racial groups are a highly discussed, powerful reference network. From historic usage in developing racist policies to today's understanding that racial bias has become an unconscious phenomenon, racial groups are a polarizing topic. Because of these deep ties, racial groups appear to be a strong reference group as one becomes a member purely by the color of their skin. This effect is perhaps reinforced by the strength norms established within different beliefs, cultures, and traditions of each race. Our research will contribute to the current work being investigated on social norms by utilizing in-group and out-group reference group of races to test the power of normative and social norms individually. These three factors, norms, reference groups, and race intersect to create an opportunity for our research to contribute to a gap in the existing literature. 
+ 
+ Given the aforementioned existing body of research related to social norms, reference groups, race as a reference group, and specifically Asian versus Caucasian populations, we were interested in how these various factors each play a role in influencing cheating behavior.  Our research questions and motivations for each of the three factors are below:
+ 
+ Descriptive vs. Normative Messages 
+
+Understanding broadly, the power that social norms have on individuals' decision making, we were interested in learning if there is a difference in the effect on cheating behavior depending on the type of social norm message one receives before making a decision to engage in cheating behavior (or not).  Do descriptive norms, which due to their lack of expectation leave moral wiggle room, have a weaker impact than normative norms?  This would be interesting to understand if one type of message has a larger effect than the other in terms of interventions that involve communicating so as to not inadvertently encourage cheating behavior.  
+
+In-Group vs. Out-Group Messages 
+
+Knowing that an individual's reference group often plays a large role in his or her decision making and therefore behavior, we were interested in how in-group versus out-group dynamics influence cheating behavior.  Regardless of the type of message, does it matter to the decision maker who that message comes from (either someone from his or her in-group versus someone from his or her out-group)? Are people more susceptible to the social norms dictated by their in-group members than the out-group members?  This could be a second layer critical in designing effective intervention strategies to curb cheating behavior.  If we get the type of message right, it may or may not matter who that message comes from.  Knowing if, or to what extent, in-group versus out-group dynamics in this context effect cheating behavior would be helpful.
+
+Race as a Reference Group: Asian vs. Caucasian 
+
+In thinking about the design of our study, we faced a challenge constructing strong ingroup versus out-group reference groups.  As our research team debated how to best (and most naturally) organize participants, we read extensive existing literature about race as a naturally constructed, and very strong reference group.  We then explored further to find an interesting discussion about the differences between Asian and Caucasian populations and decided that we wanted to narrow our focus to specifically study these two groups of people.  If we know both norms and reference groups can influence one's behavior, does race (a type of natural reference group) bias people's perception of social norms?  Our study sought out to investigate the influence of each of these three factors on one's cheating behavior. 
+
+Therefore, the four hypotheses we developed were as follows:
+
+H1 (H01): There will be (no) significant difference in the level of cheating among individuals in the normative and descriptive conditions. 
+
+H2 (H02): There will be (no) significant difference in the level of cheating among individuals given in-group social norm messages and out-group social norm messages.
+
+H3 (H03): There will be (no) significant difference in the level of cheating among Caucasian and Asian individuals in the in-group conditions. 
+
+H4 (H04): There will be (no) significant difference in the level of cheating among Caucasian and Asian individuals in the out-group conditions. 
+
+
+## Experimental Design
+
+Our research team decided to use the die-in-a-cup game used by Fischbacher and FöllmiHeusi (2013) to test cheating behavior.  In this game, participants are asked to roll dice under a covered cup with a hole in the top.  The hole allows for only the participants, and not the experimenters, to see the results of the number rolled on the dice.  After rolling, the participant is asked to report the number he or she rolled.  This is where the participant has an opportunity to cheat, falsely reporting a number with a greater payoff than the actual one rolled. Depending on the number reported, the subjects will earn the corresponding incentive. It is therefore in the participants' best interest to report rolling a five, and least in the participants' best interest to report having rolled a six (the incentive structure corresponded 1 for 1 through the number 5, with 6 resulting in 0 tickets).
+
+The benefit to using this game to test cheating behavior is that participants are able to physically play the dice game and rest self-assured that the experimenters have no way of observing what they actually rolled.  This should allow for ample opportunity to cheat.  It is also a beneficial design when analyzing the data collected.  Using dice and following the Law of Large Numbers, one could expect (as long as there is enough power) each number to appear roughly one-sixth or a little over sixteen percent of the time.  If there is a low number of sixes and ones reported and a higher number of fives and fours reported, we can deduce cheating behavior was present in these cases. 
+
+To walk through the design and setup of our experiment, our study began with the solicitation of participants on the University of Pennsylvania campus and within the Philadelphia neighborhood of Chinatown. Potential participants were asked if they had between three to five minutes to join an experiment in exchange for a chance to earn raffle tickets to enter into a lottery where four randomly chosen winners would be awarded a twenty-five-dollar gift card to shop at Amazon. When a subject expressed an interest to participate in the study, he or she was brought to one of three nearby tables to engage in the experiment. One of the experimenters provided a brief description of the experiment after which point the participant was asked if they would like to continue on as a participant in the study. If the individual replied "yes", one of the experimenters from the research team would give the participant a slip of paper with a URL printed on it which would lead the individual to the main medium and response channel of the experiment.  They were encouraged to use their own cell phones to access the link to offer another sense of privacy and anonymity. Lastly, each experimenter that helped set up a participant was sure to stress to participants that if they had any questions at any point, they should not hesitate to ask someone on the research team sitting at a nearby table. 
+
+Once the participant had accessed the survey they were first prompted to read and review the instructions that described how the game was played and the incentive structure. The instructions included an example of potential scenarios with different payoffs based on what the participant chose to report, regardless of what he or she initially rolled.  This was done to stress an understanding that we, the experimenters on the research team, do not know what he or she rolled, we only will know what they report, therefore reassuring participants that we have no way of knowing if they were truthful or cheated in terms of what they reported.  It is important to note that we randomly assigned the participant to one of four URLs which each contained a random treatment type and order of the descriptive versus normative primes. On average, the participants spent approximately two to three minutes reading and reviewing the instructions and explanation of the dice game. After continuing, the respondent was asked two preliminary questions as a knowledge check to test their understanding of the game they are about to play, the corresponding incentive structure, and correct any misunderstanding or confusion they might have before beginning. In the first question, the participant is asked about the payout if someone was truthful, meaning they rolled a six and reported a six, resulting in a payout of zero tickets. The second question tested if the person understood the opportunity to be dishonest by asking the participant about the payoff of someone who rolled a six but reported a five, resulting in a payoff of five tickets. Out of all of the respondents, a little over eighty-seven percent answered correctly on the first question and a little over eighty percent answered the second question correctly. The participant who answered incorrectly appear to have not understood the payoff structure given their answers. The payoff structure was included in the pre-experiment instructions as well as taped on each of the tables which participants were asked to sit at for the duration of the study.  
+
+Moving on to the psychical portion of the experiment, participants first engaged in a practice round before beginning the two (real) reported rounds. We decided to have participants play a practice round was used to ensure that they had a chance to develop their strategy as to how to roll the dice covered within the cup and to give them an opportunity to see for themselves that the dice were not weighted or unequal in any other way. We found that during this period some participants instantly recognized the task whereas others were slower to understand or skeptical of the setup. For those who asked a question or looked to us for guidance, we demonstrated how to roll the die, covered, and peak under the cup, verbally reminding them that the cup is there for privacy in that we, the experimenters, have no way to know what they actually roll, we only know what they report through the survey link.  The participant was asked to report their practice round which tested their knowledge and gave them familiarity using the survey in anticipation of the next two (real) rounds of the game.
+
+At this point, the participant is ready to move onto the real rounds where one of the two rounds would be randomly incentivized with the corresponding ticket reward.  The next screen they saw showed one message that included a priming statement either describing how others in a similar situation behaved (descriptive) or how others believe he or she should behave in this situation (normative). The information in the prime messages was derived from real survey responses from a preliminary survey we conducted before running the experiment. They were then instructed to roll the die in the cup for the first "real" time and report the number they rolled. This was repeated once more, where the participant received the second message then continued to roll and report.  To clarify with an example, if a participant began by receiving a descriptive message, he or she was then given a normative message on the final round. 
+
+Once participants completed all three rounds (including one practice, and two real randomly incentivized rounds), participants moved on to a brief survey collecting demographic information such as age, employment status, race, gender, and risk aversion.  While the participants finished this brief survey, the experimenters had time to look at the numbers reports and gather the appropriate number of raffle tickets earned.  After participants were given the raffle tickets they earned, they were asked to type in the raffle ticket numbers along with their email address into our electronic raffle.  Participants were also informed that the four randomly selected winners of the raffle will be notified within a few weeks via email after all data has been collected.
+
+
+### Data & Methods
+
+To analyze the results of the study we first cleaned and organized the results from the dice game. In total, we had 8 groups to compare: Caucasian vs. Asian, In-Group vs. Out-Group, Descriptive Norm message vs. Social Norm message, plus a control group. Participants were identified as cheaters if they roll a 4 or 5 (the highest ticket values) more than 50% of the time, which would be a statistical anomaly. This is not a perfect measure but can be used to further investigate groups with a high number of cheaters. We also collected other demographic data such as age, gender, education, employment status, and risk tolerance.
+
+A sample view of our data is below:
+
+```{r, echo=FALSE}
+head(AllRolls_Data)
+```
+
+Next, we established group averages. When aggregating large number sets of dice rolls, statistically we can expect that each number on a 6-sided die should occur approximately 1/6th of the time. We calculated the difference between these expected outcomes and actual outcomes to determine the level of cheating per treatment group.
+
+To evaluate the hypotheses, variance differences were tested using a Two-sample Kolmogorov-Smirnov test. We decided that this was the most appropriate statistical test for our analysis as it is a nonparametric test that can be used to compare samples with a reference probability distribution. The data was split into two groups depending on the hypothesis. 
+
+Power Analysis 
+
+We conducted a power analysis for a (two-tailed) F-test of equality of variances before running the experiment in order to understand how many subjects we should recruit for deriving the optimal sample size for our study. Although we plan to use a Kolmogorov-Smirnov test to test variance differences in the frequency of die roll results among different treatment groups, we did not find a power analysis method specifically designed for the Kolmogorov-Smirnov test. Given that an F-test of equality of variances is used to test variance differences as well, we think it can be an alternative to the Kolmogorov-Smirnov test for the power analysis, though it is a parametric test. 
+
+According to Cohen (1988), we decided the effect size should be 0.4, which is the threshold of large effect size for an F-test of equality of variances (the small effect size is 0.10, and the medium one is 0.25). We also decided that the alpha should be 5% and the power should be 80%, which are the usual values adopted in behavioral science research (McDonald, 2009). As a result, through a power analysis for an F-test of equality of variances, the sample size requirement for each of our treatment groups was 40. 
+
+However, since the F-test of equality of variances is a parametric test, we ran an additional power analysis for a (two-tailed) chi-square test.  And according to Cohen (1988), 0.5 is the value for a large effect size. Therefore, we decided that the effect size should be 0.5, the alpha should be 5%, and the power should be 80%. As a result, the sample size requirement is 38.  Together, the two power analyses suggested that the sample size for each of our treatment groups should be at least 40. 
+
+
+### Results
+
+Below are the test results for each hypothesis:
+
+Hypothesis 1 (Descriptive vs. Normative Message): Failed to reject the null
+
+Hypothesis 1 asked for the all rolls regardless of the identity of the participant or the prime race. All rolls were split into two categories, one if they were a descriptive message prime and another if it was a normative message prime. Although there was some difference in variance between these two groups it was not significant.
+
+```{r, echo=FALSE, warning=FALSE}
+ks.test(AllSocial$Roll, AllDes$Roll, alternative)
+```
+
+
+```{r, echo=FALSE, fig.height = 3, fig.width = 4, fig.align = "Center", fig.show='hold'}
+hist(AllSocial$Roll, main = "Treatment: Social Norm Message", xlab="Social Norm Message", ylab="% of Reported Rolls", col="blue")
+abline(h=16.666, col="black")
+hist(AllDes$Roll, main = "Treatment: Descriptive Norm Message", xlab="Descriptive Norm Message", ylab="% of Reported Rolls", col="blue")
+abline(h=16.666, col="black")
+```
+
+Hypothesis 2 (In-Group vs. Out-Group): Failed to reject the null
+
+Hypothesis 2 asked if there was a difference between those who had an ingroup prime message compared to those who did not. Two groups were created for this, in-group status was determined if a Caucasian participant was given a message which included a Caucasian prime identity or if an Asian participant was given an Asian prime. Alternatively, out-group status was given when mismatches occurred such as Asian getting a Caucasian identity or Caucasian getting an Asian identity. When comparing the variance of both groups a difference was found, although it was not significant.
+
+```{r, echo=FALSE, warning=FALSE}
+ks.test(InGroup$Roll, OutGroup$Roll, alternative)
+```
+
+```{r, echo=FALSE, fig.height = 3, fig.width = 4, fig.align = "Center", fig.show='hold'}
+hist(InGroup$Roll, main = "Treatment: In-Group Messaging", xlab="In-Group Message", ylab="% of Reported Rolls", col="red")
+abline(h=16.666, col="black")
+hist(OutGroup$Roll, main = "Treatment: Out-Group Messaging", xlab="Out-Group Message", ylab="% of Reported Rolls", col="red")
+abline(h=16.666, col="black")
+```
+
+
+Hypothesis 3 & 4 asked differences between races depending on the priming group status. Four groups were created for this and each hypothesis tested the differences between the variance of the two of them. Hypothesis 3 compared both races when they received an in-group prime and Hypothesis 4 compared both races when they received an out-group prime. Both of these hypotheses yielded large outcome variables, although as with the others neither were significant.
+
+Hypothesis 3 (Race: White vs. Asian Given In-Group Message): Failed to reject the null
+
+```{r, echo=FALSE, warning=FALSE}
+ks.test(IngroupA$Roll, IngroupC$Roll, alternative)
+```
+
+```{r, echo=FALSE, fig.height = 3, fig.width = 4, fig.align = "Center", fig.show='hold'}
+hist(IngroupA$Roll, main = "Treatment: Asian to Asian", xlab="Asian Messenger to Asian Participant", ylab="% of Reported Rolls", col="green")
+abline(h=16.666, col="black")
+hist(IngroupC$Roll, main = "Treatment: White to White", xlab="White Messenger to White Participant", ylab="% of Reported Rolls", col="green")
+abline(h=16.666, col="black")
+```
+
+
+Hypothesis 4 (Race: White vs Asian Give Out-Group Message): Failed to reject the null
+
+```{r, echo=FALSE, warning=FALSE}
+ks.test(OutgroupIDA$Roll, OutgroupIDC$Roll, alternative)
+```
+
+```{r, echo=FALSE, fig.height = 3, fig.width = 4, fig.align = "Center", fig.show='hold'}
+hist(OutgroupIDA$Roll, main = "Treatment: White to Asian", xlab="White Messenger to Asian Participant", ylab="% of Reported Rolls", col="yellow")
+abline(h=16.666, col="black")
+hist(OutgroupIDC$Roll, main = "Treatment: Asian to White", xlab="Asian Messenger to White Participant", ylab="% of Reported Rolls", col="yellow")
+abline(h=16.666, col="black")
+```
+
+Beyond the data collected using the four surveys that created the eight groups, a fifth survey was used to collect data for a control. In all, 37 participants played a control game which consisted of no primes. The participants were asked to purely roll the dice and report their results. Respondents in this condition rolled 5 the most out of all numbers, suggesting that there was some cheating. Comparing the variance of the Control group against all of the rolls from the other surveys also yielded no significant results.  
+
+Upon learning of these results, We wanted to create a sixth survey making minor changes to test for flaws in our design that might be causing these counterintuitive results.  The sixth survey featured a different incentive scale (making 6 equal to 6 tickets) and included that incentive structure on every dice roll reporting page. These results were compared to both the rolls of the 4 groups and the control however neither showed significant results.
+
+Due to the lack of significant results from our main hypotheses, we conducted a series of alternative tests including:
+- Gender differences 
+- Risk tolerance
+- Economic status and,
+- Correctly answering the knowledge check questions 
+All of these tests also proved to statistically insignificant.  Even in the event that one of thes test was in fact significant, we would be very cautious as this could be an example of p-hacking (digging for statistically significant results when you orginial hypotheses do not lead to any interesting results).
+
+Potential limitations and a discussion of these results will follow in the conclusion.
+
+## Conclusion
+
+  Utimately, We failed to reject all 4 null hypotheses. 
+  
+Interpretation of the Results  
+
+After running all of the analyses we set out to in the beginning, we did not find any results of significant value. For this reason, we have retained all of the null hypotheses. Our results occurred due to one of two facts, first that the experiment was flawed which will be covered in the next section discussing our limitations or that there truly was no difference in cheating behavior between groups.  
+
+In a review of the data, when looking at the distribution of responses on average they match relatively close to the probabilistic distribution. This suggests that the participants were actually reporting what they rolled in an attempt to be truthful. In theory, each side of a six-sided dice should be rolled one-sixth or 16.67% of the time. Our data suggested that the lowest number to be rolled was 2 with 52 instances or 14.53% of the time. The highest was 5, which suggests that some people did cheat, with 68 instances or 19% of the time. Although none of this is a significant deviation from what is expected, it still points that some people understood that cheating was allowed where the majority chose to be honest with their answers.
+
+Limitations 
+
+There are several factors that we believe may have had an unintended effect on our results. With additional time and funding, we would make several changes in an attempt to mitigate the effects of these confounding variables. Below is a more detailed discussion of three flaws we believe had the greatest effect. 
+
+- Payout Table: The first concern our group had was that participants were confused or misremembered the payout table which indicated how many raffle tickets a subject earned based on the number reported after rolling the dice.  The original payout structure we used mirrored what was used in prior studies where awards were matched up until six, where if a six was reported, the corresponding raffle ticket amount would be zero.  The only difference with our study was the fact that we used raffle tickets rather than experimental currency units (ECUs) which were used in most other studies. To fix this potential issue, we adjusted the payoff table to correspond on a one to one scale from one through to six. Because we believed this was the largest issue in our experimental setup, we made that change and went back out to collect more data in order to see if, with the new payout structure, our results would be more similar to the existing research.  Unfortunately, as shown in the result section, this "new" data also did not show any significant results and differed still substantially from the findings we would expect to see from literature. 
+
+- Strength of Incentive: Another potential limitation was the strength of the incentive we were able to offer participants.  We believe that earning just a few raffle tickets in the hopes of winning a relatively small dollar amount in a gift card was not a strong enough incentive for participants to be encouraged to cheat. There is also the possibility that students did not believe it was a real raffle (though we tried to assure them this was not the case), they do not like or shop through Amazon, or that their motivation for participating was helping us with our final project rather than the monetary incentive at all (this was true in at least one case where the participant told us he did not want to enter into the raffle afterward because he "did not need the money, just wanted to help"). 
+
+- Environment: Based on the Economic Model of Crime and Dishonesty, if participants mentally conducted a cost-benefit analysis while engaging in our dice game, they would understand the optimal strategy is clearly to cheat by reporting the number five no matter which number they actually roll since there is no punishment or repercussions in the game (i.e., the expected benefit obviously outweighs the expected cost).  However, according to our results, we do not believe participants conducted this cost-benefit analysis at all, or at least, not very well. Given that we ran the experiment in a student dining hall, we think that the experimental environment may have played a role in influencing our results. Research (Kerstholt, 1994) shows that when the environment where a decision is made is noisy, people's ability to identify an optimal strategy is severely impaired. Furthermore, not only does physical noise in the environment decrease the quality of "rational" decision-making, but it also undermines people's learning and reading ability, which is important in our experiment given that participants need to thoroughly read the instruction and understand the rules of the game. A study (Bronzaft and McCarthy, 1975) shows low reading achievement is related to exposure to noise (in their study, they found that there is a significant relationship between environmental noise and participants' depressed reading scores). Therefore, it is possible that running the experiment in the dining hall was a contributing factor to the difference between our results and current literature regarding decision-making on cheating behavior. We also did our best to keep the experiment environment as private as possible in a busy, crowded, public setting. For example, we purposely designed the cups to include a small hole on the top of the cup to make the participant confident that only he or she can see the number rolled.  The same consideration went into our decision to design the experiment mainly as an online reporting system to allow participants the ease of reporting the numbers they rolled via their own personal cell phone. However, we found that due to the fact that the experiment was conducted in a public space, it gave participants the opportunity to develop their social image. For example, we observed some participants went out of their way to let others know that they would be honest by reporting the numbers they actually rolled (e.g., make a public commitment to not cheat, which they are not asked to make) even though they knew there was no way anyone would know whether or not they in fact cheated. Moreover, a study conducted by Ariely et al. (2009) also shows that public settings increase people's intention to do good deeds in order to maintain or further develop their positive social image. Therefore, even though participants can make a decision totally privately in the game, conducting the experiment in a public setting may become an unanticipated factor encouraging participants to be honest (i.e., discouraging their cheating behavior).  
+
+Overall, numerous factors suggest that the experimental design was flawed and that our limitations led to the lack of significant results. Still, there is some reason to believe that the sample of participants we collected data from truly chose to not engage in cheating behaviors. Without significant results it is difficult to suggest that any results directly connect to the literature. Given our extensive critical assessment of our experimental design, we hope other interested researchers will build on our study and continue to investigate the influence of race, norms, and in-group/out-group on cheating behavior. 
+
+### References
+
+Bath, M., Hovde, P., George, E., Schulz, K., Larson, E., & Brunvatne, E. (2014). Academic integrity and community ties at a small, religious-affiliated liberal arts college. International Journal for Educational Integrity, 10(2). 
+
+Bicchieri, C., & Xiao, E. (2009). Do the right thing: but only if others do so. Journal of Behavioral Decision Making, 22(2), 191-208. 
+
+Bicchieri, C. (2005). The grammar of society: The nature and dynamics of social norms.
+Cambridge University Press 
+
+Bicchieri, C. (2016). Norms in the wild: How to diagnose, measure, and change social norms. Oxford University Press 
+
+Bicchieri, C., Muldoon, R., & Sontuoso, A. (2018). Social norms. The Stanford encyclopedia of philosophy. 
+
+Bronzaft, A. L., & McCarthy, D. P. (1975). The effect of elevated train noise on reading ability. Environment and Behavior, 7(4), 517-528. 
+
+Cohen, J. (1988). Statistical power analysis for the behavioral sciences. 
+
+Fischbacher, U., & Föllmi-Heusi, F. (2013). Lies in disguise-an experimental study on cheating. Journal of the European Economic Association, 11(3), 525-547. 
+
+Jacobsen, C., Fosgaard, T. R., & Pascual-Ezama, D. (2018). Why do we lie? A practical guide to the dishonesty literature. Journal of Economic Surveys, 32(2), 357-387.
+
+Kerstholt, J. (1994). The effect of time pressure on decision-making behavior in a dynamic task environment. Acta Psychologica, 86(1), 89-104.
+
+McDonald, J. H. (2009). Handbook of biological statistics (Vol. 2, pp. 173-181). Baltimore, MD: sparky house publishing. 
+
+Mazar, N., & Ariely, D. (2006). Dishonesty in everyday life and its policy implications. Journal of public policy & Marketing, 25(1), 117-126. 
+
+ 
